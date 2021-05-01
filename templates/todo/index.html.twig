@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+todo
+{% endblock %}
+
+{% block body %}
+    {{ parent()}}
+    <h1>ToDo List :</h1>
+    <ol class="list-group">
+        {% for cle,value in app.session.get('todos') %}
+        <li class="list-group-item">{{ cle }} : {{ value }}</li>
+        {% endfor %}
+    </ol>
+{% endblock %}
