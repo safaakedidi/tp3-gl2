@@ -1,9 +1,0 @@
-{% extends 'layout.html.twig' %}
-{% block body %}
-    {% for cle,value in app.session.flashBag.get('welcome') %}
-    <div class="alert alert-info">
-        {{ value }}
-    </div>
-    {% endfor %}
-    <h1>hello</h1>
-{% endblock %}
